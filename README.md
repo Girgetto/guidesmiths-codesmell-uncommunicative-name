@@ -1,1 +1,1 @@
-# guidesmiths-refactor-uncommunicative-name
+# guidesmiths-codesmell-uncommunicative-name
