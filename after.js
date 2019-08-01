@@ -1,23 +1,26 @@
 const { log } = console;
 const { sqrt, pow } = Math;
 
-() => {
-    const currentDate = moment().format("YYYY/MM/DD");
+
+const currentDate = () => moment().format("YYYY/MM/DD");
 
 
-    getUser();
+const getUser = () => {};
 
 
+const timer = () => {
     const MILLISECONDS_IN_A_DAY = 86400000;
     setTimeout(blastOff, MILLISECONDS_IN_A_DAY);
+}
 
-
+const address = () => {
     const address = "One Infinite Loop, Cupertino 95014";
     const cityZipCodeRegex = /^[^,\\]+[,\\\s]+(.+?)\s*(\d{5})?$/;
     const [, city, zipCode] = address.match(cityZipCodeRegex) || [];
     saveCityZipCode(city, zipCode);
+}
 
-
+const locations = () => {
     const locations = ["Austin", "New York", "San Francisco"];
     locations.forEach(location => {
     doStuff();
@@ -28,6 +31,7 @@ const { sqrt, pow } = Math;
     dispatch(location);
     });
 }
+
 
 const pythagorasTheorem = (cathetus1, cathetus2) => sqrt(pow(cathetus1, 2) + (pow(cathetus2, 2)));
 
@@ -44,13 +48,17 @@ class Calculator {
     }
 
     sum() {
-        return val1, val2;
+        return val1 + val2;
+    }
+
+    product() {
+        return val1 * val2;
     }
 }
 
 
-module.exports.pythagorasTheorem = (cathetus1) => {
-    log(pythagorasTheorem(cathetus1,5))
+module.exports.pythagorasTheorem = (cathetus1, cathetus2) => {
+    log(pythagorasTheorem(cathetus1, cathetus2))
 } 
 
 module.exports.fibonacci = (number) => {
